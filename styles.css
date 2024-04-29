@@ -344,7 +344,7 @@ p {
   align-items: center;
 }
 
-#bouton-retire {
+#bouton-relire {
   padding: 10px 20px;
   font-size: 16px;
   background-color: #ffffff;
@@ -354,7 +354,7 @@ p {
   cursor: pointer;
 }
 
-#bouton-retire:hover {
+#bouton-relire:hover {
   background-color: #ffffff;
 }
 
@@ -363,4 +363,31 @@ p {
   width: 40px;
   margin-top: 45px;
   margin-left: 155px;
+}
+
+#monImage2 {
+  margin-bottom: -5px;
+}
+
+#bouton-lire {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #3b3b3b;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+#bouton-lire:hover {
+  background-color: #ffffff;
+}
+
+#section-button {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-top: 40px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
