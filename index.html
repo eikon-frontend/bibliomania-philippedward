@@ -1,32 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bibliomania</title>
-    <link rel="stylesheet" href="scripts/star-rating.min.css" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <!-- 🦊 Votre page ici -->
 
-    <!-- 💡 Décommentez cette balise et placez-la dans votre code afin d'afficher le système de note Javascript -->
-    <!-- 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bibliomania</title>
+  <link rel="stylesheet" href="scripts/star-rating.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="fraction">
+    <div class="titre-out">
+      <p>Informations du livre</p>
+      <img src="img/out.svg" alt="croix">
+    </div>
+    <div class="livre">
+      <img src="img/couverture.png" alt="couverture">
+      <div class="info-date-star">
+        <div class="info-date">
+          <div class="info">
+            <div class="nom">
+              <p>La chute du Niagara</p>
+              <p class="prenom">Par Philippa Trinllord</p>
+            </div>
+            <div class="genre">
+              <p>Policier</p>
+              <p>Horreur</p>
+            </div>
+          </div>
+          <div class="date">
+            <p>Publié le 7 décembre 2012</p>
+          </div>
+        </div>
+        <div class="moyenne">
+          <div class="avis">
+            <p>Avis en moyenne :</p>
+          </div>
+          <div class="stars">
+            <img src="img/full.svg" alt="full">
+            <img src="img/full.svg" alt="full">
+            <img src="img/full.svg" alt="full">
+            <img src="img/etoile.svg" alt="empty">
+            <img src="img/etoile.svg" alt="empty">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="section-button">
+      <div class="section-button2">
+        <button id="bouton-relire" onclick="changerTexteEtCouleur()">Relire</button>
+        <button id="bouton-lire" onclick="changerTexteEtCouleur2()">Lu
+          <img id="monImage2" src="././img/Vector.svg" alt="Image 2">
+        </button>
+      </div>
+      <img class="trash" src="img/trash.svg" alt="trash">
+    </div>
+    <div class="synopsis">
+      <p>L'histoire raconte celle d'un tueur en série nommé Niagara. Il était très discret et n'avait jamais été pris
+        par
+        la police, mais un jour, Niagara a décidé de laisser des traces. Va-t-il se faire arrêter ?</p>
+    </div>
+    <div class="section-categorie">
+      <div class="section-avis">
+        <p>Donnez votre avis :</p>
+        <!-- 💡 Décommentez cette balise et placez-la dans votre code afin d'afficher le système de note Javascript -->
         <select class="star-rating" aria-label="Note utilisateur">
-            <option value="">Select a rating</option>
-            <option value="5">Excellent</option>
-            <option value="4">Very Good</option>
-            <option value="3">Average</option>
-            <option value="2">Poor</option>
-            <option value="1">Terrible</option>
+          <option value="">Select a rating</option>
+          <option value="5">Excellent</option>
+          <option value="4">Very Good</option>
+          <option value="3">Average</option>
+          <option value="2">Poor</option>
+          <option value="1">Terrible</option>
         </select>
-    -->
-    <!-- 💡 Script pour gérer le rating d'un livre -->
-    <script src="scripts/star-rating.min.js"></script>
-    <script>
-      var stars = new StarRating(".star-rating", {
-        tooltip: "Choisissez votre note",
-      });
-    </script>
-  </body>
+      </div>
+      <img id="monImage" src="././img/categorie.svg" alt="Image 1">
+    </div>
+    <div class="section">
+      <p>Commentaires</p>
+    </div>
+    <div class="commentaire">
+      <div class="sarah">
+        <img src="img/sarah.png" alt="profilS">
+        <div class="comsclav">
+          <p>Moi</p>
+          <div class="clavier">
+            <div class="pading">
+              <p>Ajouter un commentaire...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="heud">
+        <img src="img/heud.png" alt="profilH">
+        <div class="comsclav">
+          <div class="psodo">
+            <p>Heud le bg</p>
+            <p class="jours">2 jours</p>
+          </div>
+          <div class="repondu">
+            <p>En vrai, en vrai de vrai... SAH j'ai pas aimé.</p>
+          </div>
+          <p class="repondre">Répondre</p>
+          <div class="heart">
+            <img src="img/heart.svg" alt="heart">
+            <p>2</p>
+          </div>
+        </div>
+      </div>
+      <p class="plus">Voir les 46 commentaires</p>
+    </div>
+  </div>
+  <div class="navbar">
+    <a href="lien"><img class="navIcone" src="./img/home.png" alt="home"></a>
+    <a href="lien"><img class="navIcone" src="./img/recherche.png" alt="recherche"></a>
+    <a href="lien"><img class="navIcone" src="./img/collections.png" alt="collections"></a>
+    <a href="lien"><img class="navIcone" src="./img/profil.png" alt="profil"></a>
+  </div>
+  <!-- 💡 Script pour gérer le rating d'un livre -->
+  <script src="scripts/star-rating.min.js"></script>
+  <script>
+    var stars = new StarRating(".star-rating", {
+      tooltip: "Choisissez votre note",
+    });
+  </script>
+</body>
+
 </html>
